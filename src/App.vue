@@ -12,7 +12,6 @@ import TheNavBar from "./components/TheNavBar.vue";
 import TheFooter from "./components/TheFooter.vue";
 import TheSection from "./components/TheSection.vue";
 
-
 export default {
   data() {
     return {
@@ -22,7 +21,7 @@ export default {
   components:{
     TheNavBar,
     TheFooter,
-    TheSection
+    TheSection,
   }
 };
 </script>

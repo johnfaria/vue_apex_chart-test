@@ -1,11 +1,13 @@
 <template>
   <div class="home">
     <div class="container">
-      <h1 class="is-size-1">Home View</h1>
-      <h2>{{ homedata }}</h2>
-      <ul v-if="showstats">
-        <li v-for="pessoa in pessoas" v-bind:key="pessoa.id">{{ pessoa.name }}</li>
-      </ul>
+      <h1 class="title">Home View</h1>
+      <h2 class="subtitle">{{ homedata }}</h2>
+      <div class="container">
+        <ol v-if="showstats">
+          <li type="1" v-for="pessoa in pessoas" v-bind:key="pessoa.id">{{ pessoa.name }}</li>
+        </ol>
+      </div>
       <button class="button is-link" v-on:click="handleClick">Mostrar Pessoas</button> <br>
       <input type="text" v-model="nome"> <br>
       {{ nome }}
