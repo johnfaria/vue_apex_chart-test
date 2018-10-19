@@ -1,16 +1,13 @@
 <template>
   <div id="app">
-    <h1>{{ foo }}</h1>
+    <router-link to="/home">Home</router-link>
+    <router-view/>
   </div>
 </template>
 
 <script>
 export default {
-  data() {
-    return {
-      foo: 'bar'
-    }
-  }
+  
 };
 </script>
 
