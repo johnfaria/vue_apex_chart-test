@@ -17,6 +17,6 @@ export default {
 
 <style scoped>
 div {
-  background-color: red;
+  background-color: violet;
 }
 </style>
