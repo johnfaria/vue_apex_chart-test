@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <TheNavBar/>
     <h1 v-bind:title="titulo">{{ foo }}</h1>
     <div>
       <router-link to="/">Home</router-link> |
@@ -10,6 +11,8 @@
 </template>
 
 <script>
+import TheNavBar from "./components/TheNavBar.vue";
+
 export default {
   data() {
     return {

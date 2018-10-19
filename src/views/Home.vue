@@ -1,32 +1,34 @@
 <template>
   <div class="home">
-    <h1>Home View</h1>
+    <h1 class="is-size-1">Home View</h1>
     <h2>{{ homedata }}</h2>
     <ul v-if="showstats">
-      <li v-for="pessoa in pessoas">{{ pessoa.name }}</li>
+      <li v-for="pessoa in pessoas" v-bind:key="pessoa.id">{{ pessoa.name }}</li>
     </ul>
-    <button @click="handleClick" >Mostrar Pessoas</button> <br>
+    <button class="btn" v-on:click="handleClick" >Mostrar Pessoas</button> <br>
     <input type="text" v-model="nome"> <br>
     {{ nome }}
   </div>
 </template>
 
 <script>
-import HelloWorld from '@/components/HelloWorld.vue'
+import HelloWorld from "@/components/HelloWorld.vue";
 
 export default {
-  data(){
+
+  data() {
     return {
-      homedata: 'homedata',
+      homedata: "homedata",
       pessoas: [
-        { name: 'john', age: 12 },
-        { name: 'wesley', age: 11 },
-        { name: 'paul', age: 13 },
-        { name: 'sime', age: 10 },
+        { id: 0, name: "beltrano", age: 20 },
+        { id: 1, name: "john", age: 12 },
+        { id: 2, name: "wesley", age: 11 },
+        { id: 3, name: "paul", age: 13 },
+        { id: 4, name: "sime", age: 10 }
       ],
       showstats: true,
-      nome: ''
-    }
+      nome: ""
+    };
   },
   methods: {
     handleClick() {
@@ -37,11 +39,11 @@ export default {
       }
     }
   },
-  name: 'home',
+  name: "home",
   components: {
     HelloWorld
   }
-}
+};
 </script>
 
 <style scoped>
