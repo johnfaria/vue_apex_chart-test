@@ -2,7 +2,8 @@
   <div id="app">
     <h1>{{ foo }}</h1>
     <div>
-      <router-link to="/home">Home</router-link>
+      <router-link to="/">Home</router-link> |
+      <router-link to="/about">About</router-link>
     </div>
     <router-view/>
   </div>
@@ -20,7 +21,5 @@ export default {
 
 
 <style>
-h1 {
-  color: aquamarine;
-}
+
 </style>
